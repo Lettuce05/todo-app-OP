@@ -1,0 +1,26 @@
+{
+  "name": "todo-app-OP",
+  "version": "1.0.0",
+  "description": "A todo app for the Odin Project",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lettuce05/todo-app-OP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lettuce05/todo-app-OP/issues"
+  },
+  "homepage": "https://github.com/Lettuce05/todo-app-OP#readme",
+  "devDependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
