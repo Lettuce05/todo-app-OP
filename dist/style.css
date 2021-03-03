@@ -1,33 +1,127 @@
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
+
+/* sidebar styles */
 
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
-  width: 300px;
-  height: 100vh;
+  width: 0;
+  height: 100%;
   background-color: white;
   overflow: hidden;
   z-index: 1;
   transition: 0.5s;
   box-shadow: 3px 0px 20px rgb(150, 150, 150);
+  padding-top: 60px;
 }
+
+.sidebar-title {
+  margin-top: 70px;
+  margin-left: 20px;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.closeBar1 {
+  right: 25px;
+  margin-left: 50px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.closeBar2 {
+  right: 25px;
+  margin-left: 50px;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+/* project styles */
+
+.circle {
+  background-color: transparent;
+  border: 3px solid red;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: inline-block;
+}
+
+.color {
+  border-color: blue;
+}
+
+.project {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.projects {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.project-name {
+  margin-left: 5px;
+  vertical-align: top;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* sidebar styles END */
+
+/* menuBar styles */
+.menuButton {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.bar {
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background-color: black;
+}
+.menuBar2 {
+  margin-top: 10px;
+}
+.menuBar3 {
+  margin-top: 20px;
+}
+/* menuBar styles END */
 
 .current_list {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(212, 212, 212);
+  background-color: #f1f2f7;
 }
 
 .selected_todo_info {
   position: fixed;
   right: 0;
   top: 0;
-  width: 300px;
-  height: 100vh;
+  width: 0;
+  height: 100%;
   background-color: white;
   overflow: hidden;
   z-index: 1;

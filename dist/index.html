@@ -3,12 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <title>ToDo</title>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"> TODO: DELETE if no icons are used-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
     <div class="sidebar">
-      <p>PROJECTS</p>
+      <span class="closeBtn">
+        <span class="closeBar1 bar"></span>
+        <span class="closeBar2 bar"></span>
+      </span>
+      <p class="sidebar-title">PROJECTS</p>
       <div class="projects">
 
       </div>
@@ -16,7 +24,13 @@
 
       </button>
     </div>
+
     <div class="current_list">
+      <span class="menuButton">
+        <span class="menuBar1 bar"></span>
+        <span class="menuBar2 bar"></span>
+        <span class="menuBar3 bar"></span>
+      </span>
       <p class="list_title"></p>
       <div class="todos">
 
