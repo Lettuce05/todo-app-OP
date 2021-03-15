@@ -28,6 +28,7 @@ const createProject = (list) => {
 
 const displayProjects = (lists) => {
     const projects = document.createElement("div");
+    projects.style = "max-height: 70vh; overflow-y: scroll;";
     lists.forEach(list => {
         projects.appendChild(createProject(list));
     });

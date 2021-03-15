@@ -40,6 +40,7 @@ window.onload = function() {
             const listsStorage = JSON.parse(localStorage.getItem("todoLists"));
             // TODO: Write logic to load lists
             todoLists = listsStorage;
+
             projects.appendChild(displayProjects(todoLists));
             
             // TODO: Write logic to load todos
