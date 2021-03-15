@@ -1,4 +1,4 @@
-import {displayProjects} from "./Menu";
+import {displayProjects, displayProject} from "./Menu";
 let todoLists = []
 
 function removeAllChildNodes(parent) {
@@ -21,9 +21,23 @@ function closeNav () {
 const menuButton = document.querySelector(".menuButton");
 const closeButton = document.querySelector(".closeBtn");
 const projects = document.querySelector(".projects");
+const projectsContainer = document.querySelector(".projects-container");
+const newProject = document.querySelector(".new_project-input");
+const newProjectBtn = document.querySelector(".add-btn");
 // Menu events
 menuButton.addEventListener("click", openNav);
 closeButton.addEventListener("click", closeNav);
+newProjectBtn.addEventListener("click", ()=>{
+    if(newProject.value != ""){
+        // add new project to todoLists
+        todoLists.push(listFactory(newProject.value, "default", []));
+        // add new project to local storage
+        localStorage.setItem("todoLists", JSON.stringify(todoLists));
+        // display new project
+        displayProject(todoLists[todoLists.length-1]);
+    }
+})
+
 
 // List and todo factory functions
 const listFactory = (name, color, todos) => {

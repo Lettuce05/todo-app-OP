@@ -1,4 +1,6 @@
 var randomColor = require('randomColor');
+
+
 const createProject = (list) => {
     const project = document.createElement("span");
     project.classList.add("project");
@@ -28,6 +30,7 @@ const createProject = (list) => {
 
 const displayProjects = (lists) => {
     const projects = document.createElement("div");
+    projects.classList.add("projects-container");
     projects.style = "max-height: 70vh; overflow-y: scroll;";
     lists.forEach(list => {
         projects.appendChild(createProject(list));
@@ -36,4 +39,9 @@ const displayProjects = (lists) => {
     return projects;
 }
 
-export {displayProjects}
+const displayProject = (project) => {
+    const projectsContainer = document.querySelector(".projects-container");
+    projectsContainer.appendChild(createProject(project));
+}
+
+export {displayProjects, displayProject}
