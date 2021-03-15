@@ -151,3 +151,15 @@
   transition: 0.5s;
   box-shadow: -3px 0px 20px rgb(150, 150, 150);
 }
+
+/* Current list styles */
+.project_title {
+  margin-top: 80px;
+  margin-left: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  max-width: 90%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

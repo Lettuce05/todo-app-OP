@@ -1,10 +1,10 @@
 var randomColor = require('randomColor');
 
-
 const createProject = (list) => {
     const project = document.createElement("span");
     project.classList.add("project");
     project.style.cursor="pointer";
+    project.style.whiteSpace = "nowrap";
     const circle = document.createElement("div");
     circle.classList.add("circle");
     if(list.color == "default"){ //only sets to random color if a color has not been set
@@ -14,8 +14,9 @@ const createProject = (list) => {
         circle.style.borderColor = list.color;
     }
     project.appendChild(circle);
-    const projectName = document.createElement("span");
+    const projectName = document.createElement("p");
     projectName.classList.add("project-name");
+    projectName.style.display = "inline";
     if(list.name.length < 20){
         projectName.innerText = list.name;
     } else { //adjusts the length of list name so that it will properly display

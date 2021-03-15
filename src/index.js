@@ -21,7 +21,6 @@ function closeNav () {
 const menuButton = document.querySelector(".menuButton");
 const closeButton = document.querySelector(".closeBtn");
 const projects = document.querySelector(".projects");
-const projectsContainer = document.querySelector(".projects-container");
 const newProject = document.querySelector(".new_project-input");
 const newProjectBtn = document.querySelector(".add-btn");
 // Menu events
@@ -38,6 +37,9 @@ newProjectBtn.addEventListener("click", ()=>{
     }
 })
 
+// Todos
+const todosTitle = document.querySelector(".project_title");
+
 
 // List and todo factory functions
 const listFactory = (name, color, todos) => {
@@ -52,17 +54,19 @@ window.onload = function() {
     if(localStorage.todoLists){
         if(localStorage.todoLists.length > 0){
             const listsStorage = JSON.parse(localStorage.getItem("todoLists"));
-            // TODO: Write logic to load lists
             todoLists = listsStorage;
-
+            // Load lists from storage
             projects.appendChild(displayProjects(todoLists));
-            
             // TODO: Write logic to load todos
+            // display first project name
+            todosTitle.textContent = todoLists[0].name; 
         }
     } else { // Runs if books storage doesn't exist yet
-        todoLists.push(listFactory("Project 1", "default",[]));
+        todoLists.push(listFactory("Project To Be Determined If You Can See This I Am Not Sure How", "default",[]));
         todoLists.push(listFactory("Project 2", "default", []));
         removeAllChildNodes(projects);
         projects.appendChild(displayProjects(todoLists));
+        // display first project name
+        todosTitle.textContent = todoLists[0].name;
     }
 }
